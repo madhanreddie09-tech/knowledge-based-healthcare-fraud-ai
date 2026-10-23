@@ -1,0 +1,42 @@
+{
+  "dataset_providers": 5410,
+  "resampling": "3 repeats x 5 provider-disjoint folds; overlapping repeated CV folds",
+  "models": {
+    "Logistic": {
+      "review_5pct": {
+        "precision": 0.785455,
+        "recall": 0.426888
+      },
+      "review_10pct": {
+        "precision": 0.595107,
+        "recall": 0.640963
+      },
+      "review_20pct": {
+        "precision": 0.397542,
+        "recall": 0.852398
+      }
+    },
+    "Random forest": {
+      "review_5pct": {
+        "precision": 0.769697,
+        "recall": 0.41832
+      },
+      "review_10pct": {
+        "precision": 0.591437,
+        "recall": 0.637015
+      },
+      "review_20pct": {
+        "precision": 0.396928,
+        "recall": 0.85109
+      }
+    }
+  },
+  "disagreement": {
+    "model_flag_rate": 0.100739,
+    "heuristic_flag_rate": 0.212693,
+    "model_heuristic_disagreement_rate": 0.20955,
+    "proxy_positive_rate_in_disagreement_group": 0.191717,
+    "proxy_positive_rate_in_agreement_group": 0.067581
+  },
+  "integrity_note": "All values are measured fold means on the supplied dataset; PotentialFraud is a proxy, not confirmed adjudication; no temporal, external, or prospective validation."
+}
