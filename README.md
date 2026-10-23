@@ -26,3 +26,15 @@ Two figure previews are included as SVG vector files in `results/`: `figure1_rep
 Run `python decision_audit.py --data /path/to/csv-folder --out results`. This evaluates **3 × 5 provider-disjoint stratified folds** and reports precision, recall, and lift at fixed **5%, 10%, and 20% review capacities**, plus transparent disagreement with training-derived heuristic thresholds. The summary is in [results/decision_audit_summary.json](results/decision_audit_summary.json).
 
 At 10% hypothetical review capacity, logistic regression captured on average **64.1% of positive proxy labels** (precision **59.5%**). The classifier/heuristic disagreement rate was **21.0%**. These are retrospective, correlated-resampling estimates and **not evidence of recovered fraud, validated knowledge or generalizable performance**. External, temporal and subject-matter expert validation remain outstanding.
+
+## Policy ablation and manuscript (October 2026)
+
+The paper uses a capacity-constrained AI/knowledge governance experiment. Run:
+
+```bash
+python knowledge_policy.py --data /path/to/csv-folder --out results
+```
+
+In 3 × 5 repeated stratified provider folds, **10% review capacity** captures **64.10%** of positive proxy labels under model-only selection. Reserving 10%, 25%, or 50% of review slots for heuristic-only flags changes recall to **63.24%, 59.49%, or 52.50%**, respectively. See `results/policy_quota_ablation_summary.json`. Code emits full 180-row fold-level `results/policy_quota_ablation.csv`.
+
+These **negative intervention results are not evidence that heuristics improve fraud recovery**. The knowledge flags are statistical upper-decile conditions, not expert-validated rules. PotentialFraud labels are not verified legal adjudications. The reported folds overlap across repeats. This benchmark does not supply an external validation site, temporal holdout, prospective trial, calibrated cost model or journal acceptance guarantee.
