@@ -1,0 +1,37 @@
+{
+  "study": "Knowledge-rule reservation within fixed provider audit capacity",
+  "protocol": {
+    "providers": 5410,
+    "folds": 5,
+    "repeats": 3,
+    "seed": 71,
+    "quotas": [
+      0,
+      0.1,
+      0.25,
+      0.5
+    ],
+    "budgets": [
+      0.05,
+      0.1,
+      0.2
+    ]
+  },
+  "ten_percent_review_budget": {
+    "model_only": {
+      "recall": 0.6409629198213939,
+      "precision": 0.5951070336391437
+    },
+    "quota_10pct": {
+      "recall": 0.632356
+    },
+    "quota_25pct": {
+      "recall": 0.594862
+    },
+    "quota_50pct": {
+      "recall": 0.525011
+    }
+  },
+  "interpretation": "Fixed heuristic-only reservation reduces positive proxy-label recall on this dataset; not verified fraud or real-world value.",
+  "limitations": "Repeated folds overlap; no time/external validation; heuristics not expert validated."
+}
