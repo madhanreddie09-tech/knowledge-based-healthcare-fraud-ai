@@ -50,3 +50,12 @@ Run `python geographic_stress.py --data /path/to/csv-folder --out results` to cr
 ## External validation status (scientific integrity)
 
 External validation **has not been established**. The five-fold grouped-state experiment reuses the same provider/beneficiary dataset and has substantial beneficiary overlap. Public CMS Medicare provider aggregates and HHS OIG LEIE exclusion files are independent data *candidates*, but they do not reproduce all of the frozen model's claim-/beneficiary-level input features or the `PotentialFraud` target; LEIE exclusion is not identical to adjudicated fraud. Independent validation therefore requires a second compatible provider/claims cohort, independently defined outcomes, a frozen-model evaluation, leakage and temporal audits, and qualified domain-expert review. Do not cite the source discovery as evidence that an external experiment was performed.
+
+## Manuscript and supporting documents
+
+- [Author-updated manuscript (readable text mirror)](manuscript/Research_Manuscript_readable.md) — includes confirmed author, Midwest University affiliation, and corresponding email. For journal submission use the formatted Word/PDF delivered separately.
+- [External-validation feasibility report and protocol](manuscript/External_Validation_Protocol.md) — a protocol, not evidence of completed independent external testing.
+- [24-source DOI/reference verification report](results/References_Verification_Report.csv) — *individual Q1 category/year rankings are not certified*.
+- [Two vector figure previews](results/figure1_repeated_validation.svg) and [precision–recall preview](results/figure2_precision_recall.svg).
+
+**Repository file-format note:** The formatted DOCX/PDF manuscript and original PDF figures have not been uploaded as binary files; only readable source mirrors and SVG previews are currently committed. The reproducibility materials do not redistribute the raw healthcare dataset.
