@@ -1,0 +1,29 @@
+{
+  "models": {
+    "Logistic": {
+      "mean_AP": 0.6902046597477467,
+      "sd_AP": 0.03183407453451919,
+      "mean_AUC": 0.9372599669837355
+    },
+    "Logistic + knowledge": {
+      "mean_AP": 0.6885189480814681,
+      "sd_AP": 0.030946111234109827,
+      "mean_AUC": 0.9371740664776523
+    },
+    "Random forest": {
+      "mean_AP": 0.6907882480392865,
+      "sd_AP": 0.03745420505168364,
+      "mean_AUC": 0.9364918315647328
+    },
+    "Rule score only": {
+      "mean_AP": 0.14999851568049433,
+      "sd_AP": 0.013737872887948163,
+      "mean_AUC": 0.6395557649589645
+    }
+  },
+  "paired_knowledge_delta_AP_mean": -0.0016857116662785377,
+  "paired_knowledge_positive_folds": 10,
+  "repeats": 5,
+  "folds": 5,
+  "note": "Repeated folds are correlated; no independent-fold significance test."
+}
