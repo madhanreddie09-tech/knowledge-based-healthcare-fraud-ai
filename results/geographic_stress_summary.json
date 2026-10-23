@@ -1,0 +1,31 @@
+{
+  "scope": "EXPLORATORY SAME-DATASET internal state-grouped stress test, NOT external validation",
+  "n_providers": 5410,
+  "recorded_states": 52,
+  "folds": 5,
+  "shared_beneficiary_identifiers_by_fold": [
+    14025,
+    13136,
+    20666,
+    20001,
+    15539
+  ],
+  "logistic": {
+    "mean_recall_at_10pct": 0.6408,
+    "mean_precision_at_10pct": 0.5956,
+    "mean_AP": 0.6892,
+    "mean_AUC": 0.937
+  },
+  "random_forest": {
+    "mean_recall_at_10pct": 0.6477,
+    "mean_precision_at_10pct": 0.603,
+    "mean_AP": 0.6967,
+    "mean_AUC": 0.9385
+  },
+  "limitations": [
+    "Majority beneficiary State may not equal provider location",
+    "Overlapping beneficiary IDs between train/test groups",
+    "Dataset PotentialFraud label is not adjudicated fraud",
+    "No independent source dataset, prospective cohort, or domain-expert-reviewed rules"
+  ]
+}
